@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidy Ledger — Business templates for cleaning businesses</title>
+<meta name="description" content="Invoices, pricing calculator, bookkeeping, client manager and checklists built for house cleaning and janitorial businesses. Instant download for Excel and Google Sheets.">
+<meta property="og:title" content="Tidy Ledger — Business templates for cleaning businesses">
+<meta property="og:description" content="Price jobs right, get paid faster, and know your profit. Templates for Excel and Google Sheets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#1F6F78;--brand-dk:#14525A;--ink:#17201F;--muted:#5F6B6B;--line:#DCE5E4;--tint:#EAF4F4;--paper:#FBFAF7;--sun:#E3A857;--sun-lt:#FBF0DC;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(36px,5.4vw,60px);letter-spacing:-.02em}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.01em}
+h3{font-size:21px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:600;font-size:21px;color:var(--ink);text-decoration:none}
+.logo svg{width:30px;height:30px}
+nav .links a{margin-left:24px;color:var(--muted);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--ink)}
+nav .links a.btn{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:0;cursor:pointer;transition:background .15s,transform .15s}
+.btn:hover{background:var(--brand-dk);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.btn.sun{background:var(--sun);color:#3B2606}.btn.sun:hover{background:#d4983f}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:56px 0 80px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--brand);background:var(--tint);padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.lead{font-size:19px;color:var(--muted);max-width:520px;margin:0 0 28px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:28px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.trust span::before{content:"✓";color:var(--brand);font-weight:700;margin-right:6px}
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.stack .sheet{position:static}
+.sheet{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px -18px rgba(23,32,31,.25);padding:18px;font-size:12px}
+.sheet .t{font-family:Fraunces,serif;font-weight:600;font-size:16px;color:var(--brand);margin-bottom:10px}
+.row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #EEF2F1}
+.row b{font-weight:600}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600}
+.paid{background:#E3F2E7;color:#23683A}.unpaid{background:#FBE7E4;color:#A33A2A}
+.big{font-family:Fraunces,serif;font-size:30px;color:var(--brand);font-weight:600}
+.s1{grid-column:1;grid-row:1;margin-top:64px;transform:rotate(-1.5deg)}
+.s2{grid-column:2;grid-row:1;transform:rotate(1.5deg)}
+.s3{grid-column:1/3;grid-row:2;width:62%;justify-self:center;margin-top:-30px}
+section{padding:80px 0}
+.center{text-align:center;max-width:640px;margin:0 auto 48px}
+.center p{color:var(--muted);font-size:18px}
+.pain{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pain-card{padding:26px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.pain-card .q{font-family:Fraunces,serif;font-size:19px;margin-bottom:8px}
+.pain-card p{color:var(--muted);margin:0;font-size:15px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .shot{background:var(--tint);padding:22px 22px 0;height:190px;overflow:hidden}
+.card .shot .sheet{position:static;transform:none;box-shadow:0 10px 24px -14px rgba(23,32,31,.3);border-radius:10px 10px 0 0;height:100%}
+.card .body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card ul{padding:0;margin:0 0 20px;list-style:none;color:var(--muted);font-size:15px}
+.card li{padding:3px 0 3px 22px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:2px;background:var(--brand);opacity:.6}
+.foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price{font-family:Fraunces,serif;font-size:28px;font-weight:600}
+.fmt{font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:500;letter-spacing:.02em}
+.bundle{background:var(--brand);color:#fff;border-radius:24px;padding:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.bundle h2{color:#fff}.bundle p{color:#CFE5E3;font-size:17px}
+.bundle .box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:28px}
+.bundle .box .row{border-color:rgba(255,255,255,.12);color:#E6F2F1}
+.bundle .old{text-decoration:line-through;opacity:.6;font-size:20px;margin-right:10px}
+.bundle .price{font-size:44px;color:#fff}
+.free{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;background:var(--sun-lt);border:1px solid #F0DDB8;border-radius:20px;padding:30px 34px}
+.free .ic{width:64px;height:64px;border-radius:16px;background:var(--sun);display:grid;place-items:center;font-size:30px}
+.free h3{margin-bottom:4px}.free p{margin:0;color:#6B5631}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.step{counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--tint);color:var(--brand);font-weight:600;margin-bottom:14px;font-family:Fraunces,serif;font-size:18px}
+.step p{color:var(--muted);margin:0}
+.faq{max-width:760px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--brand);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.soon{font-size:12px;color:var(--muted);margin-top:6px}
+@media (max-width:860px){.hero,.bundle{grid-template-columns:1fr}.stack{grid-template-columns:1fr}.s1{grid-row:auto;grid-column:1;margin-top:0}.s2,.s3{display:none}.pain-grid,.steps{grid-template-columns:1fr}.free{grid-template-columns:1fr;text-align:left}nav .links a:not(.btn){display:none}.bundle{padding:32px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<nav>
+  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1F6F78"/><path d="M9 11h14M9 16h14M9 21h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="21.5" r="3" fill="#E3A857"/></svg>Tidy Ledger</a>
+  <div class="links"><a href="#templates">Templates</a><a href="#bundle">Bundle</a><a href="#faq">FAQ</a><a class="btn" href="#bundle" style="margin-left:24px;padding:10px 18px">Get the bundle</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">Built for house cleaning and janitorial businesses</span>
+    <h1>Run your cleaning business from five simple files.</h1>
+    <p class="lead">Price every job with confidence, send professional invoices in minutes, and always know who owes you and what you actually earned. No software subscription.</p>
+    <div class="cta-row"><a class="btn" href="#bundle">Get all 5 templates — $39</a><a class="btn ghost" href="#free">Free checklist</a></div>
+    <div class="trust"><span>Excel and Google Sheets</span><span>Instant download</span><span>Formulas already built</span></div>
+  </div>
+  <div class="stack" aria-hidden="true">
+    <div class="sheet s2"><div class="t">Price this job</div>
+      <div class="row"><span>1,800 sq ft · 3 bd · 2 ba</span><b>Deep</b></div>
+      <div class="row"><span>Add-ons</span><b>$130</b></div>
+      <div class="row"><span>Biweekly discount</span><b>10%</b></div>
+      <div style="margin-top:10px;color:var(--muted)">Price to quote</div><div class="big">$390</div>
+      <div class="row" style="border:0"><span>Profit margin</span><b style="color:#23683A">56%</b></div></div>
+    <div class="sheet s1"><div class="t">Invoice INV-1001</div>
+      <div class="row"><span>Deep clean – up to 1,500 sq ft</span><b>$260.00</b></div>
+      <div class="row"><span>Inside oven</span><b>$35.00</b></div>
+      <div class="row"><span>Interior windows × 12</span><b>$72.00</b></div>
+      <div class="row" style="border:0;margin-top:6px"><b>Balance due</b><b style="color:var(--brand);font-size:16px">$367.00</b></div></div>
+    <div class="sheet s3"><div class="t">Who owes you</div>
+      <div class="row"><span>Mesa Dental Office</span><span><b>$135</b> <span class="pill unpaid">Unpaid</span></span></div>
+      <div class="row"><span>Priya Patel</span><span><b>$130</b> <span class="pill unpaid">Unpaid</span></span></div>
+      <div class="row" style="border:0"><span>Jordan Smith</span><span class="pill paid">Paid</span></div></div>
+  </div>
+</header>
+</div>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="center"><h2>Cleaning is the easy part.</h2><p>The paperwork is what keeps owners up at night. These templates handle the three questions every cleaning business asks.</p></div>
+    <div class="pain-grid">
+      <div class="pain-card"><div class="q">"What should I charge?"</div><p>Enter the size, rooms, clean type and frequency. The calculator gives you a price, the time on site, and whether the job hits your profit target.</p></div>
+      <div class="pain-card"><div class="q">"Who still owes me?"</div><p>Log each visit and mark it paid or unpaid. The dashboard lists every open balance so nothing slips through.</p></div>
+      <div class="pain-card"><div class="q">"Am I making money?"</div><p>Track income, expenses and mileage. See profit by month and an estimate of what to set aside for taxes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="templates">
+  <div class="wrap">
+    <div class="center"><h2>The templates</h2><p>Buy only what you need, or get all five in the bundle and save.</p></div>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+
+<section id="bundle" style="padding-top:20px">
+  <div class="wrap">
+    <div class="bundle">
+      <div>
+        <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Best value</span>
+        <h2>The complete cleaning business kit</h2>
+        <p>Every template, built to work together: the same services and prices flow through quotes, invoices and your job log. Set it up in one evening and use it all year.</p>
+        <a class="btn sun" id="buy-bundle" href="#">Get the bundle — $39</a>
+        <div class="soon" id="soon-bundle" style="color:#CFE5E3"></div>
+      </div>
+      <div class="box">
+        <div class="row"><span>Invoice and Quote Kit</span><span>$9</span></div>
+        <div class="row"><span>Cleaning Pricing Calculator</span><span>$12</span></div>
+        <div class="row"><span>Bookkeeping and Profit Tracker</span><span>$19</span></div>
+        <div class="row"><span>Client and Job Manager</span><span>$17</span></div>
+        <div class="row"><span>Cleaning Checklist Pack</span><span>$7</span></div>
+        <div style="margin-top:18px"><span class="old">$64</span><span class="price">$39</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="free" style="padding-top:0">
+  <div class="wrap">
+    <div class="free">
+      <div class="ic" aria-hidden="true">✓</div>
+      <div><h3>Free: standard cleaning checklist</h3><p>A printable, room-by-room checklist your team can use on the next visit. No email needed.</p></div>
+      <a class="btn sun" href="free/Free-Standard-Cleaning-Checklist.pdf" download>Download the PDF</a>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center"><h2>How it works</h2></div>
+    <div class="steps">
+      <div class="step"><h3>Buy and download</h3><p>Checkout takes a minute. Your files arrive instantly by download link and email.</p></div>
+      <div class="step"><h3>Add your details once</h3><p>Type in your business name, services and prices. Every tab picks them up automatically.</p></div>
+      <div class="step"><h3>Use it every day</h3><p>Quote, invoice, log jobs and expenses. Check your profit whenever you want.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><h2>Questions</h2></div>
+    <div class="faq">
+      <details><summary>Do I need Excel?</summary><p>No. The files work in Microsoft Excel 2010 or newer and in Google Sheets, which is free. In Google Sheets, use File → Import or upload the file to Drive and open it.</p></details>
+      <details><summary>Will it work on my phone?</summary><p>You can view and update the files in the Google Sheets or Excel app. Setting up your prices is easiest on a computer the first time.</p></details>
+      <details><summary>I'm not good with spreadsheets. Is this for me?</summary><p>Yes. Each file opens on a "Start here" tab with step-by-step instructions. You only type in the yellow cells; everything else calculates for you.</p></details>
+      <details><summary>Are the prices in the calculator right for my area?</summary><p>They're examples. You set your own rates, multipliers and add-on prices on the Rates tab, and the calculator uses yours.</p></details>
+      <details><summary>Is the bookkeeping tracker tax advice?</summary><p>No. It's a record-keeping tool that organizes your income, expenses and mileage so year-end is easier. Share the summary with your tax preparer.</p></details>
+      <details><summary>Can I get a refund?</summary><p>Because these are instant digital downloads, sales are final. If a file doesn't open or something's broken, email us and we'll fix it or refund you.</p></details>
+      <details><summary>Can I use these for my team?</summary><p>Yes, within your own business. Please don't resell or share the files publicly.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> Tidy Ledger. Templates for cleaning businesses.</div>
+    <div><a href="mailto:hello@example.com" id="contact">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+/* ===== Store settings: paste your checkout links here ===== */
+const STORE = {
+  contactEmail: "hello@example.com",
+  checkout: {
+    bundle:      "",  // e.g. https://yourname.gumroad.com/l/cleaning-kit
+    invoice:     "",
+    pricing:     "",
+    bookkeeping: "",
+    crm:         "",
+    checklists:  ""
+  }
+};
+/* ========================================================== */
+
+const PRODUCTS = [
+  {id:"pricing", name:"Cleaning Pricing Calculator", price:12, fmt:"EXCEL · GOOGLE SHEETS",
+   points:["Price by square feet, rooms, clean type and frequency","Add-ons, pet surcharge and recurring discounts","Shows time on site, labor cost and profit margin","Warns you when a job is underpriced"],
+   shot:`<div class="t">Price to quote</div><div class="big">$390</div><div class="row"><span>Hours on site (2 cleaners)</span><b>4.0</b></div><div class="row"><span>Profit margin</span><b style="color:#23683A">56%</b></div>`},
+  {id:"invoice", name:"Invoice and Quote Kit", price:9, fmt:"EXCEL · GOOGLE SHEETS",
+   points:["Pick services from your own price list","Totals, tax, discounts and due dates calculate","Matching quote template for new clients","Export to PDF and email in a minute"],
+   shot:`<div class="t">Invoice INV-1001</div><div class="row"><span>Deep clean</span><b>$260.00</b></div><div class="row"><span>Inside oven</span><b>$35.00</b></div><div class="row"><span>Interior windows × 12</span><b>$72.00</b></div><div class="row" style="border:0"><b>Balance due</b><b>$367.00</b></div>`},
+  {id:"crm", name:"Client and Job Manager", price:17, fmt:"EXCEL · GOOGLE SHEETS",
+   points:["Client list with access notes, pets and preferences","Job log with paid / unpaid and status tracking","Dashboard: monthly revenue, upcoming jobs","Automatic 'who owes you' list"],
+   shot:`<div class="t">Dashboard · November</div><div class="row"><span>Revenue (done jobs)</span><b>$540</b></div><div class="row"><span>Jobs completed</span><b>4</b></div><div class="row"><span>Unpaid</span><b style="color:#A33A2A">$265</b></div>`},
+  {id:"bookkeeping", name:"Bookkeeping and Profit Tracker", price:19, fmt:"EXCEL · GOOGLE SHEETS",
+   points:["Income, expense and mileage logs","12 cleaning-business expense categories","Monthly profit summary with chart","Tax set-aside estimate each month"],
+   shot:`<div class="t">Profit summary · 2026</div><div class="row"><span>Income</span><b>$4,820</b></div><div class="row"><span>Expenses</span><b>$1,140</b></div><div class="row"><span>Mileage deduction</span><b>$212</b></div><div class="row" style="border:0"><b>Profit</b><b style="color:#1F6F78">$3,680</b></div>`},
+  {id:"checklists", name:"Cleaning Checklist Pack", price:7, fmt:"PRINTABLE PDF",
+   points:["Standard, deep clean and move-out checklists","Room-by-room tasks your team can follow","Client, date and cleaner fields","Print or laminate and reuse"],
+   shot:`<div class="t">Move-out checklist</div><div class="row"><span>☐ Inside all cabinets</span></div><div class="row"><span>☐ Inside oven and drawer</span></div><div class="row"><span>☐ Closets: shelves, rods, floor</span></div>`}
+];
+
+function link(id){ return STORE.checkout[id] || ""; }
+document.getElementById("products").innerHTML = PRODUCTS.map(p => `
+  <article class="card">
+    <div class="shot"><div class="sheet">${p.shot}</div></div>
+    <div class="body">
+      <div class="fmt">${p.fmt}</div>
+      <h3>${p.name}</h3>
+      <ul>${p.points.map(x=>`<li>${x}</li>`).join("")}</ul>
+      <div class="foot"><span class="price">$${p.price}</span>
+        <a class="btn" href="${link(p.id)||'#'}" data-id="${p.id}">Buy now</a></div>
+      ${link(p.id)?"":`<div class="soon">Checkout opening soon</div>`}
+    </div>
+  </article>`).join("");
+
+const b = document.getElementById("buy-bundle");
+if (link("bundle")) b.href = link("bundle"); else document.getElementById("soon-bundle").textContent = "Checkout opening soon";
+document.querySelectorAll('a.btn[href="#"]').forEach(a => a.addEventListener("click", e => {
+  e.preventDefault(); location.href = "mailto:" + STORE.contactEmail + "?subject=" + encodeURIComponent("Tidy Ledger order");
+}));
+document.getElementById("contact").href = "mailto:" + STORE.contactEmail;
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
