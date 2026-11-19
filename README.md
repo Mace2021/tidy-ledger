@@ -1,17 +1,23 @@
 # Tidy Ledger: storefront
 
-A static storefront for the Tidy Ledger template line for cleaning businesses, hosted on GitHub Pages.
+The public storefront for Tidy Ledger, a set of templates and a tablet app for cleaning businesses. It's hosted on GitHub Pages.
 
-## Go live checklist
+## How selling works
 
-1. **Turn on Pages:** go to Settings → Pages → Build and deployment. Set Source to *Deploy from a branch*, then pick `main` and `/ (root)`.
-2. **Create your checkout links.** Use Gumroad, Lemon Squeezy, Payhip or Stripe Payment Links. Upload the paid files there, not to this repo. Make one product per template, plus the bundle.
-3. **Paste the links** into the `STORE` block near the bottom of `index.html` (`checkout.bundle`, `checkout.invoice` and so on). Set `contactEmail` too.
+1. A buyer clicks **Buy now**, which opens a **Stripe Payment Link**.
+2. After paying, Stripe sends them to their product's **private download page**. That page lives on a separate, unlisted delivery site, not in this repo.
+3. Stripe emails the receipt.
+
+## Connecting Stripe
+
+1. In Stripe, open Product catalog and create one product per item. Use the prices in the table below.
+2. Create a **Payment Link** for each product. Under **After payment**, choose *Don't show confirmation page* and enter that product's private download URL.
+3. Paste each `https://buy.stripe.com/...` link into the `STORE.checkout` block near the bottom of `index.html`.
 4. Commit. The site updates within a minute or two.
 
 ## Important
 
-This repo is public. **Never commit the paid `.xlsx` and `.pdf` files here.** Anyone could download them for free. Only the free checklist in `/free` belongs in this repo.
+This repo is public. **Never commit the paid files, the delivery site or its private URL here.** Only the free checklist in `/free` belongs in this repo.
 
 ## Prices
 
@@ -22,6 +28,5 @@ This repo is public. **Never commit the paid `.xlsx` and `.pdf` files here.** An
 | Client and Job Manager | $17 |
 | Bookkeeping and Profit Tracker | $19 |
 | Cleaning Checklist Pack | $7 |
-| Complete bundle | $39 |
-
-To change a price, edit the `PRODUCTS` array and the bundle section in `index.html`.
+| Tablet Field App | $19 |
+| Complete kit (all of the above) | $49 |

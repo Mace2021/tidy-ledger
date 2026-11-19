@@ -103,10 +103,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <header class="hero">
   <div>
     <span class="eyebrow">Built for house cleaning and janitorial businesses</span>
-    <h1>Run your cleaning business from five simple files.</h1>
-    <p class="lead">Price every job with confidence, send professional invoices in minutes, and always know who owes you and what you actually earned. No software subscription.</p>
-    <div class="cta-row"><a class="btn" href="#bundle">Get all 5 templates — $39</a><a class="btn ghost" href="#free">Free checklist</a></div>
-    <div class="trust"><span>Excel and Google Sheets</span><span>Instant download</span><span>Formulas already built</span></div>
+    <h1>Run your cleaning business from one simple kit.</h1>
+    <p class="lead">Price every job with confidence, send professional invoices in minutes, and always know who owes you and what you earned. Use it on your computer, or on a tablet at the client's door. No subscription.</p>
+    <div class="cta-row"><a class="btn" href="#bundle">Get the complete kit — $49</a><a class="btn ghost" href="#free">Free checklist</a></div>
+    <div class="trust"><span>Excel and Google Sheets</span><span>Tablet app included</span><span>Secure checkout with Stripe</span></div>
   </div>
   <div class="stack" aria-hidden="true">
     <div class="sheet s2"><div class="t">Price this job</div>
@@ -141,7 +141,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="templates">
   <div class="wrap">
-    <div class="center"><h2>The templates</h2><p>Buy only what you need, or get all five in the bundle and save.</p></div>
+    <div class="center"><h2>The templates</h2><p>Buy only what you need, or get everything in the complete kit and save.</p></div>
     <div class="products" id="products"></div>
   </div>
 </section>
@@ -152,8 +152,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <div>
         <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Best value</span>
         <h2>The complete cleaning business kit</h2>
-        <p>Every template, built to work together: the same services and prices flow through quotes, invoices and your job log. Set it up in one evening and use it all year.</p>
-        <a class="btn sun" id="buy-bundle" href="#">Get the bundle — $39</a>
+        <p>All five templates plus the Tablet Field App. Use the spreadsheets at your desk and the app on the job. Set it up in one evening and use it all year.</p>
+        <a class="btn sun" id="buy-bundle" href="#">Get the complete kit — $49</a>
         <div class="soon" id="soon-bundle" style="color:#CFE5E3"></div>
       </div>
       <div class="box">
@@ -162,7 +162,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <div class="row"><span>Bookkeeping and Profit Tracker</span><span>$19</span></div>
         <div class="row"><span>Client and Job Manager</span><span>$17</span></div>
         <div class="row"><span>Cleaning Checklist Pack</span><span>$7</span></div>
-        <div style="margin-top:18px"><span class="old">$64</span><span class="price">$39</span></div>
+        <div class="row"><span>Tablet Field App</span><span>$19</span></div>
+        <div style="margin-top:18px"><span class="old">$83</span><span class="price">$49</span></div>
       </div>
     </div>
   </div>
@@ -182,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="wrap">
     <div class="center"><h2>How it works</h2></div>
     <div class="steps">
-      <div class="step"><h3>Buy and download</h3><p>Checkout takes a minute. Your files arrive instantly by download link and email.</p></div>
+      <div class="step"><h3>Buy and download</h3><p>Secure Stripe checkout takes a minute. You land on your private download page right away.</p></div>
       <div class="step"><h3>Add your details once</h3><p>Type in your business name, services and prices. Every tab picks them up automatically.</p></div>
       <div class="step"><h3>Use it every day</h3><p>Quote, invoice, log jobs and expenses. Check your profit whenever you want.</p></div>
     </div>
@@ -194,7 +195,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div class="center"><h2>Questions</h2></div>
     <div class="faq">
       <details><summary>Do I need Excel?</summary><p>No. The files work in Microsoft Excel 2010 or newer and in Google Sheets, which is free. In Google Sheets, use File → Import or upload the file to Drive and open it.</p></details>
-      <details><summary>Will it work on my phone?</summary><p>You can view and update the files in the Google Sheets or Excel app. Setting up your prices is easiest on a computer the first time.</p></details>
+      <details><summary>Does it work on a tablet?</summary><p>Yes. The Tablet Field App is made for iPad and Android tablets. It installs to your home screen, works offline, and lets you quote, invoice, run checklists with a signature, and log jobs and expenses with big, tap-friendly buttons. Your data stays on your device.</p></details>
+      <details><summary>How do I pay and get my files?</summary><p>Checkout is handled by Stripe, so we never see your card details. As soon as you pay, you're taken to your private download page and Stripe emails your receipt.</p></details>
       <details><summary>I'm not good with spreadsheets. Is this for me?</summary><p>Yes. Each file opens on a "Start here" tab with step-by-step instructions. You only type in the yellow cells; everything else calculates for you.</p></details>
       <details><summary>Are the prices in the calculator right for my area?</summary><p>They're examples. You set your own rates, multipliers and add-on prices on the Rates tab, and the calculator uses yours.</p></details>
       <details><summary>Is the bookkeeping tracker tax advice?</summary><p>No. It's a record-keeping tool that organizes your income, expenses and mileage so year-end is easier. Share the summary with your tax preparer.</p></details>
@@ -215,8 +217,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 /* ===== Store settings: paste your checkout links here ===== */
 const STORE = {
   contactEmail: "hello@example.com",
+  // Stripe Payment Links (https://buy.stripe.com/...). Leave "" to show "Checkout opening soon".
   checkout: {
-    bundle:      "",  // e.g. https://yourname.gumroad.com/l/cleaning-kit
+    bundle:      "",
+    tablet:      "",
     invoice:     "",
     pricing:     "",
     bookkeeping: "",
@@ -227,6 +231,9 @@ const STORE = {
 /* ========================================================== */
 
 const PRODUCTS = [
+  {id:"tablet", name:"Tablet Field App", price:19, fmt:"IPAD · ANDROID TABLET · WORKS OFFLINE",
+   points:["Price jobs, then turn the quote into an invoice in one tap","Save invoices as PDF and email them on the spot","Room-by-room checklists with a signature pad","Jobs, clients, income, expenses and mileage in one place"],
+   shot:`<div class="t">On site · Deep clean</div><div class="row"><span>☑ Degrease range hood</span></div><div class="row"><span>☑ Scrub grout and caulk</span></div><div class="row"><span>☐ Dust ceiling fans</span><b style="color:#1F6F78">12/24</b></div>`},
   {id:"pricing", name:"Cleaning Pricing Calculator", price:12, fmt:"EXCEL · GOOGLE SHEETS",
    points:["Price by square feet, rooms, clean type and frequency","Add-ons, pet surcharge and recurring discounts","Shows time on site, labor cost and profit margin","Warns you when a job is underpriced"],
    shot:`<div class="t">Price to quote</div><div class="big">$390</div><div class="row"><span>Hours on site (2 cleaners)</span><b>4.0</b></div><div class="row"><span>Profit margin</span><b style="color:#23683A">56%</b></div>`},
